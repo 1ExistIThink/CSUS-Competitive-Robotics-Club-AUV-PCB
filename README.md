@@ -48,7 +48,7 @@ Front (red) - Signals and GND Plane
 
 Ideally, to cut cost, I am trying to use 1oz for the front and back, and 0.5 oz in the middle layers. Board size is 122mm x 71.5mm, and uses M2 screws for mounting holes. 
 
-Minor issues that have been fixed/improved in the layouts:
+Minor issues in the layout that you will likely see in the following images that since have been fixed/improved:
 *  Silkscreen and pins for the LED has been aligned with the JST connectors
 *  TX RX pins have been moved a little, along with the silkscreen for the ease of use
 
