@@ -4,11 +4,11 @@ CSUS Competitive Robotics Club AUV PCB. This only includes the pinnouts and desc
 
 Anything written below is not helpful unless you are looking for electrical system specific information. 
 
-Note that the Main board and Secondary board have isolated grounds. Any interaction between them is using isolated components. They communicate with 5 pin JST connectors. Main board operates with a 2S lipo battery, while the secondary thruster PCB operates with a 4S battery. We isolated them because of voltage sag and emi. The hydrophone PCB will have the same ground has the 2S PCB, and will be powered with 3.3V. The images may NOT be the same as what is actually in the design files, however the differences will be minor, like silkscreen, pin placements, etc. Any major improvements will have updated pictures. 
+Note that the Main board and Secondary board have isolated grounds. Any interaction between them is using isolated components. They communicate with 5 pin JST connectors. Main board operates with a 2S lipo battery, while the secondary thruster PCB operates with a 4S battery. We isolated them because of voltage sag and EMI. The hydrophone PCB will have the same ground has the 2S PCB, and will be powered with 3.3V. The images may NOT be the same as what is actually in the design files, however the differences will be minor, like silkscreen, pin placements, etc. Any major improvements will have updated pictures. 
 
 MAIN BOARD SCHEMATIC AND BOARD LAYOUT INFORMATION: 
 
-(Ideally open the schematic and board layout PDF while reading the information below, our logo will be added as well but this is purely cosmetic)
+(Ideally open the schematic and board layout PDF while reading the information below)
 
 First I just want to say that the reason there is B_EN (buck converter enable) is that for our RoboSub competition we require a on off killswitch, so the EN pin will feed to the secondary board that will be connected to a P channel mosfet gate driver and the logic needed to be reversed for the buck converter, optionally we dont need to turn off our electronics however we decided to make the killswitch turn everything off, I added three options with 0 ohm resistors so we can adjust this later, we can either use B_EN, or EN, or just 5V so we can decide later too. Notibly, the 5V for the killswitch/water detection is different from the 5V for the other electronics, this is because if you use the same 5V, then it will be in a switching state and will not be stable meaning it will not either be on or off. 
 
