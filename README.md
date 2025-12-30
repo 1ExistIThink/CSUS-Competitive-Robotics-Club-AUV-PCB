@@ -46,7 +46,9 @@ Front (red) - Signals and GND Plane
 
 4th Layer (blue) - Signals and GND Plane
 
-Ideally, to cut cost, I am trying to use 1oz for the front and back, and 0.5 oz in the middle layers. Board size is 122mm x 71.5mm, and uses M2 screws for mounting holes. 
+Ideally, to cut cost, I am trying to use 1oz for the front and back, and 0.5 oz in the middle layers. 
+
+Board size is 122mm x 71.5mm, radius fillet on the edges are 2mm, and uses M2 screws for mounting holes. 
 
 Minor issues in the layout that you will likely see in the following images that since have been fixed/improved:
 *  Silkscreen and pins for the LED has been aligned with the JST connectors
