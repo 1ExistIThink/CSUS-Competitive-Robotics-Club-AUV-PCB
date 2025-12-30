@@ -63,7 +63,7 @@ Front Plane:
 2nd Layer:
 <img width="3197" height="1982" alt="image" src="https://github.com/user-attachments/assets/ac8e664b-e581-4a77-bde6-31691627d380" />
 
-3rd Layer:
+3rd Layer (again, even though not optimal, a lot of traces are here because if I put them on the top or bottom layer, the ground or power plane will be "cut" and those planes have a higher oz copper meaning they can carry more current):
 <img width="3200" height="1977" alt="image" src="https://github.com/user-attachments/assets/fd968ce7-6fc8-4446-80cf-46d3da47ebca" />
 
 4th Layer:
