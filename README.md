@@ -31,10 +31,10 @@ Teensy 4.1 corner, not a whole lot to say, just connects to headers.
 Board Layout is still my area of least expertise and am really still trying to learn. So if you see anything that is questionable let me know. I also know that adding traces in the power plane (layer 3) is not ideal, but I think the tradeoff is worth it because of the oz copper I will be trying to use, and routing them on the front or back would make the GND plane to the XT30 connectors basically be "cut" which is bad because of the oz copper. I also added little astricts * so I can identify which pins are connected to something (like sensors), there is a PDF here that will show the pinnout. I also added a lot of test points and labeling. Also the RX and TX next to the teensy are so it can communicate with the pi and jetson orin nano. I separated the ground loops, so the basically the buck converter has one loop back to the battery, and all the rest of the components share the same ground loop, of course while making sure there are no ground islands and that the board follows basic DRC. 
 
 Layers:
-Front - Signals and GND Plane
-2nd Layer - GND Plane
-3rd Layer - Power Plane
-4th Layer - Signals and GND Plane
+Front (red) - Signals and GND Plane
+2nd Layer (green) - GND Plane
+3rd Layer (orange) - Power Plane
+4th Layer (blue) - Signals and GND Plane
 
 Ideally, to cut cost, I am trying to use 1oz for the front and back, and 0.5 oz in the middle layers. Board size is 122mm x 71.5mm
 
