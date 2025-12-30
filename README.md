@@ -1,6 +1,8 @@
 # CSUS Competitive Robotics Club AUV PCB Descriptions
 
-CSUS Competitive Robotics Club AUV PCB. This only includes the pinnouts and descriptions of the boards. Anything written below is not helpful unless you are looking for electrical system specific information. 
+CSUS Competitive Robotics Club AUV PCB. This only includes the pinnouts and descriptions of the boards. 
+
+Anything written below is not helpful unless you are looking for electrical system specific information. 
 
 Note that the Main board and Secondary board have isolated grounds. Any interaction between them is using isolated components. They communicate with 5 pin JST connectors. 
 
