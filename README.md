@@ -47,3 +47,24 @@ Front (red) - Signals and GND Plane
 4th Layer (blue) - Signals and GND Plane
 
 Ideally, to cut cost, I am trying to use 1oz for the front and back, and 0.5 oz in the middle layers. Board size is 122mm x 71.5mm
+
+All Planes visible:
+<img width="3202" height="1982" alt="image" src="https://github.com/user-attachments/assets/73ba9e6a-35f5-49b3-8e96-cd4bfb8ca251" />
+
+Front Plane:
+<img width="3195" height="1975" alt="image" src="https://github.com/user-attachments/assets/658d4544-61e5-4d7c-bdad-b76de8dd8b14" />
+
+2nd Layer:
+<img width="3197" height="1982" alt="image" src="https://github.com/user-attachments/assets/ac8e664b-e581-4a77-bde6-31691627d380" />
+
+3rd Layer:
+<img width="3200" height="1977" alt="image" src="https://github.com/user-attachments/assets/fd968ce7-6fc8-4446-80cf-46d3da47ebca" />
+
+4th Layer:
+<img width="3200" height="1967" alt="image" src="https://github.com/user-attachments/assets/146369e8-8507-47c1-ba52-a9137b95a1d3" />
+
+3D View (Front):
+<img width="3355" height="2087" alt="image" src="https://github.com/user-attachments/assets/6efef9bb-d6c4-425c-8335-7d4276d7130a" />
+
+3D View (Back):
+<img width="3355" height="2085" alt="image" src="https://github.com/user-attachments/assets/e175ebd8-d029-499f-97ca-cc247c428fa7" />
