@@ -34,7 +34,3 @@ Front - Signals and GND Plane
 
 Ideally, to cut cost, I am trying to use 1oz for the front and back, and 0.5 oz in the middle layers. Board size is 122mm x 71.5mm
 
-I also will plan on adding a logo in the large empty space and or adding some connectors. This is still unfinished but the layout will likely be the same/simular.
-
-I think this is my 3rd board I've ever designed and 2nd that I will actually buy.
-
