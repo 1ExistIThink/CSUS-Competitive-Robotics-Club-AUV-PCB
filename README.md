@@ -46,7 +46,11 @@ Front (red) - Signals and GND Plane
 
 4th Layer (blue) - Signals and GND Plane
 
-Ideally, to cut cost, I am trying to use 1oz for the front and back, and 0.5 oz in the middle layers. Board size is 122mm x 71.5mm
+Ideally, to cut cost, I am trying to use 1oz for the front and back, and 0.5 oz in the middle layers. Board size is 122mm x 71.5mm, and uses M2 screws for mounting holes. 
+
+Minor issues that have been fixed/improved in the layouts:
+*  Silkscreen and pins for the LED has been aligned with the JST connectors
+*  TX RX pins have been moved a little, along with the silkscreen for the ease of use
 
 All Planes visible:
 <img width="3202" height="1982" alt="image" src="https://github.com/user-attachments/assets/73ba9e6a-35f5-49b3-8e96-cd4bfb8ca251" />
