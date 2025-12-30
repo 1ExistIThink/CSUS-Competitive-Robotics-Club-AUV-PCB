@@ -1,4 +1,4 @@
-# CSUS Competitive Robotics Club-AUV PCB Descriptions
+# CSUS Competitive Robotics Club AUV PCB Descriptions
 CSUS Competitive Robotics Club AUV PCB. This only includes the pinnouts and descriptions of the boards. 
 
 
