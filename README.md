@@ -5,9 +5,10 @@ CSUS Competitive Robotics Club AUV PCB. This only includes the pinnouts and desc
 ### Voltage and Current Measurement:
 Currently we have a 10k and 1k in series to ground, which acts as a voltage divider so we can find the battery voltage. 
 To find the voltage of the primary (electronics) battery, do the following math:
-Vbattery = Vmeasured * (10000 + 1000)/1000 // note that Vmeasured is the voltage measured by the ADC
+Vbattery = Vmeasured * (10000 + 1000)/1000 // Note that Vmeasured is the voltage measured by the ADC. This is pin A12.
 
 To find the current of the battery do the following math:
+Ibattery = Vmeasured / (Rsense * Gain) // Note that gain is 20, and Rsense is 0.005 ohms. This is pin A13. 
 
 ## Main Board Technical Information 
 Note that anything written below is not helpful unless you are looking for electrical system specific information. 
