@@ -51,6 +51,9 @@ Ideally, to cut cost, I am trying to use 1oz for the front and back, and 0.5 oz 
 
 Board size is 122mm x 71.5mm, radius fillet on the edges are 2mm, and uses M2 screws for mounting holes. 
 
+Previous mistake fixes/revisions that this board has:
+* Teensy pinnout fixed, made pins 0 and 1 (UART pins) close together, also I flipped the labels for the teensy pinout and also added a 5V output on pin headers
+
 Minor issues in the layout that you will likely see in the following images that since have been fixed/improved:
 *  None Yet Since 1/3/2026
 
