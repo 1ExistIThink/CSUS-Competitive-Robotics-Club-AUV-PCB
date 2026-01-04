@@ -54,7 +54,7 @@ Board size is 122mm x 71.5mm, radius fillet on the edges are 2mm, and uses M2 sc
 Previous mistake fixes/revisions that this board has:
 * Teensy pinnout fixed, made pins 0 and 1 (UART pins) close together, also I flipped the labels for the teensy pinout and also added a 5V output on pin headers
 
-Minor issues in the layout that you will likely see in the following images that since have been fixed/improved:
+Minor issues in the layout that you WILL likely see in the following images that since then have been fixed/improved:
 *  None Yet Since 1/3/2026
 
 All Planes visible:
