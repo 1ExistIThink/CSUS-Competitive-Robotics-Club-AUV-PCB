@@ -3,7 +3,7 @@
 CSUS Competitive Robotics Club AUV PCB. This only includes the pinnouts and descriptions of the boards. 
 
 ## Main Board Technical Information 
-Note that anything written below is not helpful unless you are looking for electrical system specific information. 
+Note that anything written below is not helpful unless you are looking for electrical system specific information. If you are looking for how to use this board, go to the "Main Board Application Information" folder. 
 
 Note that the Main board and Secondary board have SHARED grounds, they will be connected using the mounting holes and a spade connector. They communicate with 5 pin JST connectors. Main board operates with a 2S lipo battery, while the secondary thruster PCB operates with a 4S battery. The hydrophone PCB will have the same ground as the 2S PCB, and will be powered with 3.3V. The images may NOT be the same as what is actually in the design files, however the differences will be minor, like silkscreen, pin placements, etc. Any major improvements will have updated pictures. 
 
