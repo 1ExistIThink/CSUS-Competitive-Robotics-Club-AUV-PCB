@@ -1,25 +1,15 @@
-# Main Board Application Info
+## Main Board Application Info  
 
-To measure the voltage and current of the primary electronics battery:
+### Voltage and Current Measurement
 
-**Voltage Measurement:**
+To find the voltage of the primary (electronics) battery, do the following math:
 
-Vbattery = Vmeasured * (10000 + 1000) / 1000  
-- `Vmeasured` = ADC pin A12  
-- Example: if Vmeasured = 2.5 V → Vbattery = 2.5 * 11 = 27.5 V  
+Vbattery = Vmeasured * (10000 + 1000)/1000  
 
-**Current Measurement:**
+Note that Vmeasured is the voltage measured by the ADC. This is pin A12.
+
+To find the current of the battery do the following math:
 
 Ibattery = Vmeasured / (Rsense * Gain)  
-- `Vmeasured` = ADC pin A13  
-- Rsense = 0.005 Ω  
-- Gain = 20  
-- Example: if Vmeasured = 4 V → Ibattery = 4 / (0.005 * 20) = 40 A  
 
-**Notes:**  
-- Make sure ADC pins match hardware: A12 = voltage, A13 = current  
-- Rsense and Gain must match INA180 settings  
-- Adjust gain or Rsense for different current ranges  
-
-**Suggested GitHub folder structure:**
-
+Note that gain is 20, and Rsense is 0.005 ohms. This is pin A13.
