@@ -55,7 +55,7 @@ Previous mistake fixes/revisions that this board has:
 * Teensy pinnout fixed, made pins 0 and 1 (UART pins) close together, also I flipped the labels for the teensy pinout and also added a 5V output on pin headers
 
 Minor issues in the layout that you WILL likely see in the following images that since then have been fixed/improved:
-*  None Yet Since 1/3/2026
+*  4 pin JST connector instead of 3 for the secondary board, added a buck converter enable pin
 
 All Planes visible:
 
