@@ -18,23 +18,23 @@ Ill start from the top left of the schematic and work my way to the bottom right
 ## Water Detection, Killswitch, and 7.4V to 5V LDO
 
 The top left we have a LDO, that converts 7.4 to 5V for the killswitch and water detection logic. The killswitch is just connected to an external switch. The water detection how it will work is it uses 2.54mm headers that are glued to a sponge. Since this is pretty noisy there are RC filters. When water goes into the sponge, the wires short and will cause the AND gate output (where the EN pin is) to output 5V, which is good for driving the P channel MOSFET, hence why EN is connected to the secondary board, which also means the MOSFET will be off. The logic is inverted to the buck converter since if the EN pin outputs 5V, then we want the buck to be off because this means either water is detected, and or the killswitch is enabled. LEDs are there so we can visually see if they are on or not.
-<img width="1545" height="1152" alt="image" src="https://github.com/user-attachments/assets/a69cf71d-9105-4e98-a1bc-6b39f59cb9e0" />
+<img width="1542" height="1140" alt="image" src="https://github.com/user-attachments/assets/2fc8909f-eaff-4e69-b7b8-8cd086723d26" />
 
 
 ## 5V to 3.3V LDO, and Sensors
 
 Here we just have a 3 pin header for LED strips which will be used for diagnosing issues, an IMU, and a pressure sensor. The LDO is essentially just used to power the pressure sensor (GY-MS5837-30BA). I also added 100nF decoupling capacitors for transients and zero ohm resistors for adjustability on all the data pins to the teensy.
-<img width="1440" height="815" alt="image" src="https://github.com/user-attachments/assets/44ff4c8d-ecff-471a-addc-76ebbbf9dd7d" />
+<img width="1417" height="805" alt="image" src="https://github.com/user-attachments/assets/ab34c76d-71c9-4bb2-a13c-35064d849c17" />
 
 ## 7.4V to 5V 20A Buck Converter, Voltage and Current Measurement
 
 We will likely not be pulling 20A, but we are powering a lot of parts. A Raspberry pi 5 8gb, and a teensy, some sensors. We also will be powering servos on this rail with an external PWM controller. The output capacitors of the buck converter are really big, I also thought the sizing was incorrect but I rechecked calculations from the datasheet and it seems right, I also was assuming the worst case. Since the size of the caps is pretty large I added an 0603 bleed resistor. The voltage of the battery is simply measured just with a voltage divider. The current measurement uses an IC, which with the formula in the application notes, at 20A we should get 2V to the ADC of the teensy which is safe. All of this is using 0 ohm resistors so it can be adjusted later. We also are using XT30 connectors to connect to the Jetson, Pi, and anything else we would want to power, with small 0603 100nF decoupling capacitors for transients. 
-<img width="1375" height="510" alt="image" src="https://github.com/user-attachments/assets/2d405ae0-6068-4d61-822f-7ec453c4c2ab" />
+<img width="1370" height="507" alt="image" src="https://github.com/user-attachments/assets/232e6358-cf3b-4fbc-bbc1-c6b05514c7fc" />
 
 ## Teensy 4.1
 
 Not a whole lot to say, it just connects to 2.54mm pin headers (the indented pins are the ones being used by sensors)
-<img width="1130" height="1227" alt="image" src="https://github.com/user-attachments/assets/607d1fd8-d2e3-4d8e-8c7a-1c42515b3caa" />
+<img width="1130" height="1227" alt="image" src="https://github.com/user-attachments/assets/de5ef8cd-3ddf-499f-b850-7f93b6b028e4" />
 
 Board Layout is still my area of least expertise and am still trying to learn and improve. I know that adding traces in the power plane (layer 3) is not ideal, but I think the tradeoff is worth it because of the oz copper I will be trying to use (which is relatively low), and routing them on the front or back would make the GND plane to the XT30 connectors basically be "cut" which is bad because of the oz copper and the trace wouldn't carry as much current. I also added little astricts * next to the pin headers for the teensy so I can identify which pins are connected to something (like sensors), there is a PDF here that will show the pinnout. I also added some test points and labeling. Also the RX and TX next to the teensy are so it can communicate with the pi and jetson orin nano. I separated the ground loops, so the basically the buck converter has only a few possible loops back to the battery, and all the rest of the components share a differnet ground loop all connecting back to the battery, of course while making sure there are no ground islands and that the board follows basic DRC. The buck converter has many vias, to make the return path to the battery low impedance. Because the path of the buck converter is slightly divided with some planes being smaller, meaning more resistance, I added more vias onto the larger pad to ensure more power goes onto that larger plane. 
 
@@ -58,21 +58,22 @@ Minor issues in the layout that you WILL likely see in the following images that
 *  4 pin JST connector instead of 3 for the secondary board, added a buck converter enable pin
 
 All Planes visible:
+<img width="2867" height="1790" alt="image" src="https://github.com/user-attachments/assets/3872f670-e304-46e8-9c6f-23365f9067aa" />
 
 Front Plane:
-<img width="3197" height="1987" alt="image" src="https://github.com/user-attachments/assets/5c4c8e2a-c100-4fe3-87f0-f1689ddce3ab" />
+<img width="2840" height="1762" alt="image" src="https://github.com/user-attachments/assets/ab28dff3-862c-4dbe-a76d-1149350eac8c" />
 
 2nd Layer:
-<img width="3205" height="1982" alt="image" src="https://github.com/user-attachments/assets/f1a1762f-8bf2-408d-ba95-140f0de7a111" />
+<img width="2857" height="1742" alt="image" src="https://github.com/user-attachments/assets/30d60f44-be73-4e82-a5a9-44a3a1fb2a26" />
 
 3rd Layer (again, even though not optimal, a lot of traces are here because if I put them on the top or bottom layer, the ground or power plane will be "cut" and those planes have a higher oz copper meaning they can carry more current):
-<img width="3195" height="1975" alt="image" src="https://github.com/user-attachments/assets/d71142be-e8f3-4fd3-9519-96510bc1229a" />
+<img width="2872" height="1762" alt="image" src="https://github.com/user-attachments/assets/1f12dddc-8846-4c0d-848e-8465923c5291" />
 
 4th Layer:
-<img width="3200" height="1980" alt="image" src="https://github.com/user-attachments/assets/015b9145-f4ac-480c-9beb-b8c5d8f568c6" />
+<img width="2860" height="1735" alt="image" src="https://github.com/user-attachments/assets/e79f5df1-c4c6-4898-ae06-d55da5759f15" />
 
 3D View (Front):
-<img width="3357" height="2152" alt="image" src="https://github.com/user-attachments/assets/a1d3d56c-5bf5-4e2b-9cd9-c05cde1f6594" />
+<img width="3020" height="2060" alt="image" src="https://github.com/user-attachments/assets/ed8082e4-8651-453e-b476-1713b6101fcd" />
 
 3D View (Back):
-<img width="3350" height="2075" alt="image" src="https://github.com/user-attachments/assets/db63ad5c-2139-4ad1-ae18-d8620f745cc3" />
+<img width="3250" height="2090" alt="image" src="https://github.com/user-attachments/assets/56a42693-6507-41bb-897a-f0e3bcc9ebbb" />
