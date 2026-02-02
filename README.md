@@ -2,10 +2,12 @@
 
 CSUS Competitive Robotics Club AUV PCB. This only includes the pinnouts and descriptions of the boards. 
 
-## Main Board Technical Information 
-Note that anything written below is not helpful unless you are looking for electrical system specific information. If you are looking for how to use this board, go to the `"Main Board Application Information"` folder. 
+Note that anything written below is not helpful unless you are looking for electrical system specific information. If you are looking for how to use this board, go to the `"Application Information"` folders. 
 
-Note that the Main board and Secondary board have SHARED grounds, they will be connected using the mounting holes and a spade connector. The main board mainly powers all of the electronics, while the secondary board will mainly power the thrusters. They communicate with 5 pin JST connectors. Main board operates with a 2S lipo battery, while the secondary thruster PCB operates with a 4S battery. The hydrophone PCB will have the same ground as the 2S PCB, and will be powered with 5V. The images may NOT be the same as what is actually in the design files, however the differences will be minor, like silkscreen, placements, etc. Any major improvements will have updated pictures. Something else to note is that there is a chance in the future we will switch to a 12V tether instead, so this is designed for an input voltage of 7.4-12V, although this board was mainly designed with the intent of a 2S battery. 
+Note that the Main board and Secondary board have shared grounds, they will be connected using the mounting holes and a spade connector. The main board mainly powers all of the electronics, while the secondary board will mainly power the thrusters. They "communicate" with 4 pin JST connectors. Main board operates with a 2S lipo battery, while the secondary thruster PCB operates with a 4S battery. The hydrophone PCB will have the same ground as the 2S PCB, and will be powered with 5V. The images may NOT be the same as what is actually in the design files, however the differences will be minor, like silkscreen, placements, etc. Any major improvements will have updated pictures.
+
+## Main Board Technical Information 
+Something to note is that there is a chance in the future we will switch to a 12V tether instead, so this is designed for an input voltage of 7.4-12V, although this board was mainly designed with the intent of a 2S battery. 
 
 ## Main Board Schematic and Board Layout Information
 
@@ -77,3 +79,12 @@ Front Plane:
 
 3D View (Back):
 <img width="3250" height="2090" alt="image" src="https://github.com/user-attachments/assets/56a42693-6507-41bb-897a-f0e3bcc9ebbb" />
+
+
+
+## Secondary Board Technical Information 
+Note that anything written below is not helpful unless you are looking for electrical system specific information. If you are looking for how to use this board, go to the `"Application Information"` folders. 
+
+Something else to note is that there is a chance in the future we will switch to a 12V tether instead, so this is designed for an input voltage of 12-16.8V, although this board was mainly designed with the intent of a 4S battery. 
+
+## Secondary Board Schematic and Board Layout Information
