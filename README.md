@@ -55,7 +55,7 @@ Board size is 122mm x 71.5mm, radius fillet on the edges are 2mm, and uses M2 sc
 
 Previous mistake fixes/revisions that this board has:
 * Teensy pinnout fixed, made pins 0 and 1 (UART pins) close together, also I flipped the labels for the teensy pinout and also added a 5V output on some pin headers
-
+* Significantly different will update later, added a XT30 directly to the battery through the fuse for servos 2/14/2026
 Minor issues in the layout that you WILL likely see in the following images that since then have been fixed/improved:
 *  4 pin JST connector instead of 3 for the secondary board, added a buck converter enable pin
 
