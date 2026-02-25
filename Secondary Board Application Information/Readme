@@ -7,7 +7,7 @@ To find the voltage of the secondary (thruster) battery, use the following formu
 
 Note that `Vmeasured` is the voltage measured by the ADC. This is pin _____TBD______.
 
-To find the current of the battery, unfortunately it is not as simple as it seems. Yes the formula still applies, however, on the front and back, there are two large resistors R1 and R2. If you see one connected, then assume Rsense is 0.003. If two resistors R1 and R2 
+To find the current of the battery, unfortunately it is not as simple as it seems. It will vary depending on the number of thrusters you plan on using. Yes the formula still applies, however, on the front and back, there are two large resistors R1 and R2. If you see one connected, then assume Rsense is 0.003. If two resistors R1 and R2 
 are present, assume that Rsense is 0.0015 ohms. 
 
 - `Ibattery = Vmeasured / (Rsense * Gain)`  
